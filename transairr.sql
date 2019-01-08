@@ -20,7 +20,7 @@ use transair;
 
 DROP TABLE IF EXISTS `affectation`;
 CREATE TABLE IF NOT EXISTS `affectation` (
-  `NOVOL` varchar(7) NOT NULL,
+  `NOVOL` varchar(8) NOT NULL,
   `DATE_VOL` date NOT NULL default '0000-00-00',
   `NBPASS` bigint(4) default '0',
   `NOPILOTE` bigint(4) default '0',
@@ -62,7 +62,7 @@ INSERT DELAYED IGNORE INTO `affectation` (`NOVOL`, `DATE_VOL`, `NBPASS`, `NOPILO
 
 DROP TABLE IF EXISTS `appareil`;
 CREATE TABLE IF NOT EXISTS `appareil` (
-  `CODETYPE` varchar(3) NOT NULL,
+  `CODETYPE` varchar(4) NOT NULL,
   `NBPLACE` bigint(4) default '0',
   `DESIGN` varchar(30) default NULL,
   PRIMARY KEY  (`CODETYPE`)
@@ -106,7 +106,8 @@ INSERT DELAYED IGNORE INTO `avion` (`NUAVION`, `ANNSERV`, `NOM_AV`, `NBHVOL`, `C
 (8467, 1995, 'Le Sud', 600, '734'),
 (8556, 1989, '', 12000, 'AB3'),
 (8567, 1988, 'Ville de Reims', 8000, '734'),
-(8832, 1988, 'Ville de Paris', 16000, '734');
+(8832, 1988, 'Ville de Paris', 16000, '734'),
+(9999,1988,'Ville de Paris', 15000,'735');
 
 -- --------------------------------------------------------
 
